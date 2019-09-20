@@ -1,0 +1,11 @@
+    /* 背景透明化 */
+    body {
+        margin: 0px;
+        padding: 0px;
+        background: #fff url(https://images.unsplash.com/photo-1426260193283-c4daed7c2024?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80)center center fixed no-repeat;
+        background-size: cover;
+        opacity: 0.8;
+        margin-top: 8px;
+        margin-bottom: 4px;
+
+    }
