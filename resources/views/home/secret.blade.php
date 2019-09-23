@@ -73,13 +73,13 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            存貨管理
+                            產品管理
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">新增存貨紀錄</a>
+                            <a class="dropdown-item" href="#">新增產品紀錄</a>
                             <a class="dropdown-item" href="#" id="newProduct" name="newProduct" onclick="location='/home/secret/product'">查詢存貨紀錄</a>
-                            <a class="dropdown-item" href="#">修改存貨紀錄</a>
-                            <a class="dropdown-item" href="#">刪除存貨紀錄</a>
+                            <a class="dropdown-item" href="#">修改產品紀錄</a>
+                            <a class="dropdown-item" href="#">刪除產品紀錄</a>
 
                         </div>
                     </li>
@@ -101,28 +101,13 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            人員管理
+                            人員帳號管理
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">新增人員資料</a>
-                            <a class="dropdown-item" href="#" id="newPerson" name="newPerson" >查詢人員資料</a>
-                            <a class="dropdown-item" href="#">修改人員資料</a>
-                            <a class="dropdown-item" href="#">刪除人員資料</a>
-
-                        </div>
-                    </li>
-
-                    
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            帳號管理
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="#">新增系統帳號</a>
-                            <a class="dropdown-item" href="#" id="newEmployee" name="newEmployee">查詢系統帳號</a>
-                            <a class="dropdown-item" href="#">修改系統帳號</a> 
-                            <a class="dropdown-item" href="#">刪除系統帳號</a>
+                            <a class="dropdown-item" href="#">新增人員帳號</a>
+                            <a class="dropdown-item" href="#" id="newEmployee" name="newEmployee">查詢人員帳號</a>
+                            <a class="dropdown-item" href="#">修改人員帳號</a> 
+                            <a class="dropdown-item" href="#">刪除人員帳號</a>
 
                         </div>
                     </li>
