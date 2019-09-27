@@ -5,15 +5,17 @@
 @section('content')
 
 {{-- products --}}
+<span style=" font-family:Microsoft JhengHei;">
 <div>
     <a href="/home/secret/products/create" class="btn btn-md btn-success pull-right">
         <span class="glyphicon glyphicon-plus"></span>新增
     </a>
 </div>
-<div class="card-deck">
+
+<div class="card-deck  col-12 .col-sm-3 ">
     
         @foreach ($productsList as $pro)
-        <div class="card col-6 .col-sm-3 container" > 
+        <div class="card container" > 
             
         <img class="card-img-top img-thumbnail" src='../../img/{{$pro->pro_photo}}'  alt="Card image cap">
             <div class="card-body">                       
@@ -34,7 +36,7 @@
         </div>
         @endforeach
 </div>
-    
+</span>  
 {{-- products --}}
 
 @endsection
