@@ -4,14 +4,14 @@
 @endsection
 @section('content')
 
-{{-- p --}}
+{{-- products --}}
 <div>
     <a href="/home/secret/products/create" class="btn btn-md btn-success pull-right">
         <span class="glyphicon glyphicon-plus"></span>新增
     </a>
 </div>
 <div class="card-deck">
-
+    
         @foreach ($productsList as $pro)
         <div class="card col-6 .col-sm-3 container" > 
             
@@ -35,6 +35,6 @@
         @endforeach
 </div>
     
-
+{{-- products --}}
 
 @endsection

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>coffee進銷存管理系統</title>
+    <title>coffee進銷管理系統</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
@@ -99,22 +99,4 @@
 
 </body>
 
-<div class="container">
-  @foreach ($employeeList as $emp)
-
-    <h1>{{$emp->em_account}}</h1>
-    <h1>{{$emp->em_password}}</h1>
-
-    <form method="post" action="/home/login/{{$emp->em_id}}"> 
-        <a href="/home/login/{{$emp->em_id}}/add" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-pencil"></span>新增</a> |
-        <a href="/home/login/{{$emp->em_id}}/edit" class="btn btn-xs btn-info"><span class="glyphicon glyphicon-pencil"></span>修改</a> | 
-            @csrf
-            @method('DELETE')
-        <button type="submit" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-remove"></span> 刪除</button>
-    </form>
-    @endforeach
-  </table>
-</div>
-
-</body>
 </html>

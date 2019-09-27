@@ -15,7 +15,6 @@ Route::get('/home/index',"HomeController@index" );
 
 // login
 Route::get('/home/login',"HomeController@loginpage");
-Route::resource('employees', 'EmployeesController');
 
 //secret
 Route::get('/home/secret',"HomeController@secretpage");
@@ -23,6 +22,10 @@ Route::get('/home/secret',"HomeController@secretpage");
 //product
 Route::get('/home/secret/products',"ProductsController@index");
 Route::resource('/home/secret/products', 'ProductsController');
+
+// employees
+Route::get('/home/secret/employees',"EmployeesController@index");
+Route::resource('/home/secret/employees', 'EmployeesController');
 
 
 

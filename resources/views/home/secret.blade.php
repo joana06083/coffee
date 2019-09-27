@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>coffee進銷存管理系統</title>
+    <title>coffee進銷管理系統</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
@@ -29,7 +29,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-            <a class="navbar-brand" href="secret.php">coffee進銷存管理系統</a>
+            <a class="navbar-brand" href="secret.php">coffee進銷管理系統</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -72,7 +72,7 @@
 
                     <li class="nav-item">
                         <a class="nav-link" href="#"
-                            onclick="location='/home/secret/'"> 
+                            onclick="location='/home/secret/employees'"> 
                             人員帳號管理
                         </a>
                     </li>
@@ -83,12 +83,14 @@
                 </ul>
 
             </div>
-            <form class="form-inline my-2 my-lg-0" method="get" action="">
-                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Welcome! 王小美</button>
+          
+            <form class="form-inline my-2 my-lg-0" method="post" action="">
+                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Welcome!123</button>
                 &nbsp
                 <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit" id="logout" name="logout" href="#">
                 logout</button>
             </form>
+          
         </nav>
 
     </span>
