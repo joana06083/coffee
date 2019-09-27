@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -48,7 +47,7 @@
        
     </ul>
     <!--logintitle  -->
-
+    
     <!-- submit -->
     <section id="cover">
 
@@ -99,3 +98,23 @@
  <!-- submit -->
 
 </body>
+
+<div class="container">
+  @foreach ($employeeList as $emp)
+
+    <h1>{{$emp->em_account}}</h1>
+    <h1>{{$emp->em_password}}</h1>
+
+    <form method="post" action="/home/login/{{$emp->em_id}}"> 
+        <a href="/home/login/{{$emp->em_id}}/add" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-pencil"></span>新增</a> |
+        <a href="/home/login/{{$emp->em_id}}/edit" class="btn btn-xs btn-info"><span class="glyphicon glyphicon-pencil"></span>修改</a> | 
+            @csrf
+            @method('DELETE')
+        <button type="submit" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-remove"></span> 刪除</button>
+    </form>
+    @endforeach
+  </table>
+</div>
+
+</body>
+</html>

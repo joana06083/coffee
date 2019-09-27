@@ -15,9 +15,18 @@ Route::get('/home/index',"HomeController@index" );
 
 // login
 Route::get('/home/login',"HomeController@loginpage");
-// Route::post('/home/login',"HomeController@loginpage");
+Route::resource('employees', 'EmployeesController');
 
 //secret
 Route::get('/home/secret',"HomeController@secretpage");
-Route::get('/home/secret/product',"HomeController@secret_productpage");
+
+//product
+Route::get('/home/secret/products',"ProductsController@index");
+Route::resource('/home/secret/products', 'ProductsController');
+
+
+
+
+
+
 
