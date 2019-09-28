@@ -6,13 +6,13 @@
 
 {{-- products --}}
 <span style=" font-family:Microsoft JhengHei;">
-<div>
+<div style="margin:10px 5px">
     <a href="/home/secret/products/create" class="btn btn-md btn-success pull-right">
         <span class="glyphicon glyphicon-plus"></span>新增
     </a>
 </div>
 
-<div class="card-deck  col-12 .col-sm-3 ">
+<div class="card-deck">
     
         @foreach ($productsList as $pro)
         <div class="card container" > 
@@ -21,7 +21,8 @@
             <div class="card-body">                       
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">序號：{{$pro->pro_id}}</li>
-                    <li class="list-group-item">品名：{{$pro->pro_name}}</li>
+                    <li class="list-group-item">品名：<br>
+                                                {{$pro->pro_name}}</li>
                     <li class="list-group-item">單位：{{$pro->pro_unit}}</li>
                     <li class="list-group-item">售價：{{$pro->pro_price}}</li>
                 </ul>

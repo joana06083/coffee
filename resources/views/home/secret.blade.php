@@ -56,20 +56,27 @@
                         </a>
                     </li>
                     
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"
-                            onclick="location='/home/secret/products'"> 
-                            產品管理
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
+                  <li class="nav-item">
                         <a class="nav-link" href="#"
                             onclick="location='/home/secret/'"> 
                             廠商管理
                         </a>
                     </li>
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"
+                            onclick="location='/home/secret/'"> 
+                            顧客管理
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"
+                            onclick="location='/home/secret/products'"> 
+                            產品管理
+                        </a>
+                    </li>
+                        
                     <li class="nav-item">
                         <a class="nav-link" href="#"
                             onclick="location='/home/secret/employees'"> 

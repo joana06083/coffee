@@ -69,7 +69,7 @@
       <label class="col-md-4 control-label" for="okOrCancel"></label>
       <div class="col-md-8">
             <button type="submit" id="okOrCancel" name="okOrCancel" class="btn btn-success" action="/home/secret/products">OK</button>
-            <button type="submit" id="okOrCancel" name="okOrCancel" class="btn btn-danger">Cancel</button>
+            <button type="submit" id="okOrCancel" name="okOrCancel" class="btn btn-danger" action="/home/secret/products">Cancel</button>
       </div>
     </div>
 

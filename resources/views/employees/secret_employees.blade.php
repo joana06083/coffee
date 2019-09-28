@@ -6,7 +6,7 @@
 
 <span style=" font-family:Microsoft JhengHei;">
   {{-- employees --}}
-    <div>
+    <div style="margin:10px 5px">
           <a href="/home/secret/employees/create" class="btn btn-md btn-success pull-right">
               <span class="glyphicon glyphicon-plus"></span>新增
           </a>
