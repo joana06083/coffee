@@ -11,10 +11,11 @@
 |
 */
 // index
-Route::get('/home/index',"HomeController@index" );
+Route::get('/home/index',"HomeController@index");
 
 // login
 Route::get('/home/login',"HomeController@loginpage");
+Route::POST('/home/login',"HomeController@loginpage");
 
 //secret
 Route::get('/home/secret',"HomeController@secretpage");

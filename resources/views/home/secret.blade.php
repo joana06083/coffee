@@ -18,7 +18,7 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- css樣式 -->
-    <link rel="stylesheet" href="../css/secret.css">
+    <link rel="stylesheet" href="../../css/secret.css">
     @yield('head')
 </head>
 
@@ -90,14 +90,16 @@
                 </ul>
 
             </div>
-          
-            <form class="form-inline my-2 my-lg-0" method="post" action="">
-                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Welcome!123</button>
+        
+            <form class="form-inline my-2 my-lg-0" method="post" action="/home/login">
+                 @csrf
+                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">
+                    Welcome!王大明</button>
                 &nbsp
-                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit" id="logout" name="logout" href="#">
+                <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit" id="logout" name="logout" href="/home/login">
                 logout</button>
             </form>
-          
+  
         </nav>
 
     </span>

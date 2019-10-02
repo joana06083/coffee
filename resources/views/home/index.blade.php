@@ -29,7 +29,7 @@
     
         <!-- index -->
         <div class="jumbotron jumbotron-container-fluid">
-            <h1 class="display-4">coffee進銷存管理系統</h1>
+            <h1 class="display-4">coffee進銷管理系統</h1>
             <hr class="my-4">
             <div class="sm-4">
                 <button type="submit" class="btn btn-outline-dark" onclick="javascript:location='/home/login'">點擊跳轉登入頁</button>

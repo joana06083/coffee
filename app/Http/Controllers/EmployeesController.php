@@ -45,6 +45,7 @@ class EmployeesController extends Controller
         $emp->em_id = $request->em_id;
         $emp->em_account = $request->em_account;
         $emp->em_password = $request->em_password;
+        $emp->d_name = $request->d_name ;
         $emp->em_name = $request->em_name;
         $emp->em_email = $request->em_email;
         $emp->em_tel = $request->em_tel;
@@ -92,6 +93,7 @@ class EmployeesController extends Controller
         $emp->em_id = $request->em_id;
         $emp->em_account = $request->em_account;
         $emp->em_password = $request->em_password;
+        $emp->d_name = $request->d_name ;
         $emp->em_name = $request->em_name;
         $emp->em_email = $request->em_email;
         $emp->em_tel = $request->em_tel;

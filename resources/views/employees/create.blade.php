@@ -47,6 +47,15 @@
       </div>
     </div>
 
+    <!-- d_name-->
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="d_name">部門：</label>  
+      <div class="col-md-4">
+      <input id="d_name" name="d_name" type="text" placeholder="" class="form-control input-md">
+        
+      </div>
+    </div>
+
     <!-- em_name-->
     <div class="form-group">
       <label class="col-md-4 control-label" for="em_name">姓名：</label>  

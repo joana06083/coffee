@@ -17,6 +17,7 @@
             <th scope="col">員工編號：</th>
             <th scope="col">帳號：</th>
             <th scope="col">密碼：</th>
+            <th scope="col">部門：</th>
             <th scope="col">姓名：</th>
             <th scope="col">email：</th>
             <th scope="col">電話：</th>
@@ -32,6 +33,7 @@
               <td>{{$emp->em_id}}</td>
               <td>{{$emp->em_account}}</td>
               <td>{{$emp->em_password}}</td>
+              <td>{{$emp->d_name}}</td>
               <td>{{$emp->em_name}}</td>
               <td>{{$emp->em_email}}</td> 
               <td>{{$emp->em_tel}}</td>

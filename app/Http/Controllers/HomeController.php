@@ -14,17 +14,16 @@ class HomeController extends Controller
         return view('home.index');
     }
 
-    function loginpage(){
-        
-        $employeesList = Employees::all();
-        return view('home.login', compact('employeesList'));
-    }
-
     function secretpage(){
-        
-        return view('home.secret');
+
+        $emp = Employees::all();
+        return view('home.secret', compact('emp'));
     }
 
-
+   //登入頁面
+    function loginpage(){
+    
+        return view('home.login');
+    }
 
 }
