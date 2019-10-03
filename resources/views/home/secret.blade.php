@@ -1,3 +1,9 @@
+<?php
+
+$db = new PDO("mysql:host=localhost;dbname=coffee;port=3306", "root", "");
+$db->exec("set names utf8");
+$result = $db->query("SELECT * FROM `employees` WHERE `em_name` LIKE '王大%'");
+?> 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,7 +71,7 @@
 
                     <li class="nav-item">
                         <a class="nav-link" href="#"
-                            onclick="location='/home/secret/'"> 
+                            onclick="location='/home/secret/customers'"> 
                             顧客管理
                         </a>
                     </li>
@@ -94,12 +100,15 @@
             <form class="form-inline my-2 my-lg-0" method="post" action="/home/login">
                  @csrf
                 <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">
-                    Welcome!王大明</button>
+              
+
+                <?php  while($row = $result->fetch()){ ?>
+                 Welcome!<?php echo "{$row['em_name']}";?></button>
                 &nbsp
                 <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit" id="logout" name="logout" href="/home/login">
                 logout</button>
             </form>
-  
+            <?php }$db = null; ?>  
         </nav>
 
     </span>

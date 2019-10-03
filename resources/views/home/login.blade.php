@@ -1,6 +1,7 @@
 <?php 
 //session_start
 session_start();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -79,8 +80,8 @@ session_start();
                         <label class="sr-only">Password</label>
                         <input type="password" name="password" id="password" class="form-control" placeholder="Password">
                     </div>
-
-                    <button type="submit" class="btn btn-secondary" name="membername" id="membername" value="登入"  href="/home/secret">Login</button>
+                  
+                    <button type="submit" class="btn btn-secondary" name="membername" id="membername" value="登入" onclick="ShowValue()">Login</button>
                     <button type="reset" class="btn btn-secondary" name="btnReset" id="btnReset" value="重設"  href="/home/login">Reset</button>
 
                     </td>
@@ -99,8 +100,13 @@ session_start();
         </div>
 
         </section>
-
-
-
+        <script language="javascript">
+                function ShowValue(){
+                　var account=document.getElementById("account").value;
+                　var pwd=document.getElementById("password").value;
+                  alert(account);
+                　alert(pwd);
+                }
+        </script>
 
 </body>
