@@ -32,8 +32,9 @@ Route::resource('/home/secret/employees', 'EmployeesController');
 Route::get('/home/secret/customers',"CustomersController@index");
 Route::resource('/home/secret/customers', 'CustomersController');
 
-
-
+//suppliers
+Route::get('/home/secret/suppliers',"SuppliersController@index");
+Route::resource('/home/secret/suppliers', 'SuppliersController');
 
 
 

@@ -64,7 +64,7 @@ $result = $db->query("SELECT * FROM `employees` WHERE `em_name` LIKE '王大%'")
                     
                   <li class="nav-item">
                         <a class="nav-link" href="#"
-                            onclick="location='/home/secret/'"> 
+                            onclick="location='/home/secret/suppliers'"> 
                             廠商管理
                         </a>
                     </li>
