@@ -11,6 +11,7 @@ $result = $db->query("SELECT * FROM `employees` WHERE `em_name` LIKE '王大%'")
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 
     <title>coffee進銷管理系統</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -21,16 +22,24 @@ $result = $db->query("SELECT * FROM `employees` WHERE `em_name` LIKE '王大%'")
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 
-    <!-- Latest compiled JavaScript -->
+    <!-- bootstrapcdn -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    {{-- uikit --}}
+    <script src="../../js/uikit.min.js"></script>
+    <script src="../../js/uikit-icons.min.js"></script>
+
     <!-- css樣式 -->
     <link rel="stylesheet" href="../../css/secret.css">
+
+
     @yield('head')
 </head>
 
 <style type="text/css" scoped></style>
 
 <body>
+    {{-- 標題 --}}
     <span style=" font-family:Microsoft JhengHei;">
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -50,14 +59,14 @@ $result = $db->query("SELECT * FROM `employees` WHERE `em_name` LIKE '王大%'")
 
                     <li class="nav-item">
                         <a class="nav-link" href="#"
-                            onclick="location='/home/secret/'"> 
+                            onclick="location='/home/secret/purchase'"> 
                             進貨管理
                         </a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link" href="#"
-                            onclick="location='/home/secret/'"> 
+                            onclick="location='/home/secret'"> 
                             銷貨管理
                         </a>
                     </li>
@@ -112,7 +121,7 @@ $result = $db->query("SELECT * FROM `employees` WHERE `em_name` LIKE '王大%'")
         </nav>
 
     </span>
-    @yield('content')
-</body>
+    @yield('content') 
 
-</html>
+</body>
+    

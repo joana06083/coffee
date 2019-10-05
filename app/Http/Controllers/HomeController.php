@@ -25,5 +25,12 @@ class HomeController extends Controller
     
         return view('home.login');
     }
-
+    
+    function purchasepage(){
+        return view('purchase.secret_purchase');
+    }
+    function bosspage(){
+    
+        return view('home.secret_bosslogin');
+    }
 }
