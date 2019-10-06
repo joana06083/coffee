@@ -66,10 +66,10 @@ $result = $db->query("SELECT * FROM `ordermater`");
     </thead> 
     <tbody>
       <td><input  style="width:50px;" value="1"></td>
-      <td><input  style="width:100px;" value="1"></td>
-      <td><input></td>
-      <td><input style="width:100px;" value="1"></td>
-      <td><input style="width:100px;" value="1"></td>
+      <td><input  style="width:100px;" value="A"></td>
+      <td><input value="咖啡豆"></td>
+      <td><input style="width:100px;" ></td>
+      <td><input style="width:100px;" value="300"></td>
       <td><input style="width:100px;" value="1"></td>
       <td><input style="width:100px;" value="1"></td>
       <td><input style="width:100px;" value="1"></td>

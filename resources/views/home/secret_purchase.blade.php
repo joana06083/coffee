@@ -51,7 +51,7 @@ $result = $db->query("SELECT * FROM `purchase`");
 </form>
 <?php }$db = null; ?>
 <br>
-{{-- purchaselist --}}
+<!-- purchaselist-->
 
 <form method="post" action="/home/secret/purchase" class="form-horizontal">
   <table class="table table-bordered">
@@ -67,7 +67,13 @@ $result = $db->query("SELECT * FROM `purchase`");
     </thead> 
     <tbody>
       <td><input  style="width:50px;" value="1"></td>
-      <td><input  style="width:100px;" value="1"></td>
+      <td>
+        <select>
+          <option>A</option>
+          <option>B</option>
+          <option>C</option>
+        </select>
+      </td>
       <td><input></td>
       <td><input style="width:100px;" value="1"></td>
       <td><input style="width:100px;" value="1"></td>

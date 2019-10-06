@@ -19,6 +19,9 @@
     <!-- bootstrapcdn -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
            
+    <!-- vue  cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
     <!-- css樣式 -->
     <link rel="stylesheet" href="../../css/index.css">
 </head>

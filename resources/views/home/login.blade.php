@@ -13,31 +13,35 @@ $db->exec("set names utf8");
 $account2= $_POST['account'] ;
 $password2 = $_POST['password'];
 
-$result = $db->prepare("select `em_id`,`em_account`, `em_password` from `employee` where em_id = :pid em_account = :paccount  em_password = :ppassword lock in share mode"); 
-
+$result = $db->prepare("SELECT  `em_account`,`em_password` ,`em_name`FROM `employees` where  em_account = account  em_password = password em_name = name lock in share mode"); 
 
 //判斷式
 
 //執行登入動作
 if (!isset($_SESSION["membername"]) || ($_SESSION['membername']=="")){
+    
     //預設帳號密碼
     if(isset($_POST["account"]) && isset($_POST["password"])){
         
         // 這邊應接收到資料庫帳密
-        // $account = $account2;
-        // $pwd = $password2;
+        $account = $account2;
+        $password = $password2;
+        
 
+      
         //固定帳密版本
-        $account ="joana06083";
-        $pwd = "19940608";
+        // $account ="joana06083";
+        // $pwd = "19940608";
 
 
         //對比帳號密碼
-        if( ($_POST["account"]==$account) && ($_POST["password"]) )
+        if( ($_POST["account"]==$account) && ($_POST["password"==$password]) )
         {
             $_SESSION["membername"]=$username;
         }   
+        
         return view('home.secret');
+ 
     }
     //執行登出動作
     if(isset($_GET["logut"]) && $_GET["logout"] == "ture")
@@ -72,9 +76,12 @@ $db = null;
     <!-- Popper JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 
-    <!-- bootstrapcdn -->
+    <!-- bootstrap cdn -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-      
+     
+    <!-- vue  cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
     <!-- css樣式 -->
     <link rel="stylesheet" href="../../css/login.css">
 </head>
@@ -82,12 +89,13 @@ $db = null;
 <style type="text/css" scoped></style>
 
 <body>
+
     <!-- logintitle --> 
 
     <ul class="nav nav justify-content-center">
    
         <li class="nav-item">
-            <h2> <a class="nav-link  text-secondary" name="btnOK" id="btnOK"  href="/home/index">Home</a></h2>
+            <h2> <a class="nav-link  text-secondary" href="/home/index">Home</a></h2>
         </li>  
         <li class="nav-item">
             <h2> <a class="nav-link  text-secondary">|</a></h2>
@@ -120,8 +128,8 @@ $db = null;
 
             <div class="info-form">
         
-                <form class="form-inlin justify-content-center" id="form" name="form" method="post" action="home/login">
-                    @csrf
+                <form class="form-inlin justify-content-center" id="form" name="form" method="post" action="secret">
+                  @csrf
                     <div class="form-group">
                         <label class="sr-only"><h3>Account</h3> </label>
                         <input type="text" name="account" id="account" class="form-control"  placeholder="Enter Your Account">
@@ -131,7 +139,7 @@ $db = null;
                         <input type="password" name="password" id="password" class="form-control" placeholder="Enter Your Password">
                     </div>
                   
-                    <button type="submit" class="btn btn-secondary" name="membername" id="membername" value="登入" onclick="ShowValue()">Login</button>
+                    <button type="submit" class="btn btn-secondary" name="membername" id="membername" value="登入">Login</button>
                     <button type="reset" class="btn btn-secondary" name="btnReset" id="btnReset" value="重設"  href="/home/login">Reset</button>
 
                     </td>
@@ -139,7 +147,6 @@ $db = null;
                 </form>
 
             </div>
-
 
         </div>
 
@@ -150,13 +157,10 @@ $db = null;
         </div>
 
         </section>
-        <script language="javascript">
-                function ShowValue(){
-                　var account=document.getElementById("account").value;
-                　var pwd=document.getElementById("password").value;
-                    alert(account);
-                    alert(password);
-                }
-        </script>
+    </body>
+    <script>
 
-</body>
+    </script>
+</html>
+
+備份檔

@@ -39,5 +39,4 @@ class HomeController extends Controller
         return view('home.secret_order');
     }
 
-    
 }

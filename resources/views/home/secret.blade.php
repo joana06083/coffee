@@ -4,7 +4,7 @@ $db->exec("set names utf8");
 $result = $db->query("SELECT * FROM `employees` WHERE `em_name` LIKE '王大%'");
 ?> 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -24,6 +24,9 @@ $result = $db->query("SELECT * FROM `employees` WHERE `em_name` LIKE '王大%'")
     <!-- bootstrapcdn -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+    <!-- vue  cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
     <!-- css樣式 -->
     <link rel="stylesheet" href="../../css/secret.css">
 
