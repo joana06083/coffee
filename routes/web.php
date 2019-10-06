@@ -20,7 +20,7 @@ Route::POST('/home/login',"HomeController@loginpage");
 //secret page
 Route::get('/home/secret',"HomeController@secretpage");
 //登入後會員頁->Boss、採購員工頁面 可看到即將到期未出貨之商品(追蹤進度)
-Route::get('/home/secret/boss',"HomeController@bosspage"); 
+Route::get('/home/secret/announcement',"HomeController@announcementpage"); 
 
 //product (Boss、行銷、採購)
 //登入後會員頁->行銷員工頁面 可看到商品品項、售價
@@ -44,6 +44,9 @@ Route::resource('/home/secret/suppliers', 'SuppliersController');
 Route::get('/home/secret/purchase',"HomeController@purchasepage");
 
 //order (Boss、行銷)
+Route::get('/home/secret/order',"HomeController@orderpage");
+
+
 
 
 

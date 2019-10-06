@@ -2,9 +2,9 @@
     body {
         margin: 10px;
         padding: 10px;
-        background: #fff url(https://images.unsplash.com/photo-1482242248426-c4e9fe3a559a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80)center center fixed no-repeat;
+        background-image: url("../../img/login.jpg");
         background-size: cover;
         opacity: 0.8;
-
         position: absoluate;
+
     }

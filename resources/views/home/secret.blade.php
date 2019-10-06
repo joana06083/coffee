@@ -1,5 +1,4 @@
 <?php
-
 $db = new PDO("mysql:host=localhost;dbname=coffee;port=3306", "root", "");
 $db->exec("set names utf8");
 $result = $db->query("SELECT * FROM `employees` WHERE `em_name` LIKE '王大%'");
@@ -24,14 +23,9 @@ $result = $db->query("SELECT * FROM `employees` WHERE `em_name` LIKE '王大%'")
 
     <!-- bootstrapcdn -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    
-    {{-- uikit --}}
-    <script src="../../js/uikit.min.js"></script>
-    <script src="../../js/uikit-icons.min.js"></script>
 
     <!-- css樣式 -->
     <link rel="stylesheet" href="../../css/secret.css">
-
 
     @yield('head')
 </head>
@@ -40,11 +34,11 @@ $result = $db->query("SELECT * FROM `employees` WHERE `em_name` LIKE '王大%'")
 
 <body>
     {{-- 標題 --}}
-    <span style=" font-family:Microsoft JhengHei;">
+    <span style="opacity: 0.9;">
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-            <a class="navbar-brand" href="/home/secret">coffee進銷管理系統</a>
+            <a class="navbar-brand" href="/home/secret/announcement">coffee進銷管理系統</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,7 +60,7 @@ $result = $db->query("SELECT * FROM `employees` WHERE `em_name` LIKE '王大%'")
 
                     <li class="nav-item">
                         <a class="nav-link" href="#"
-                            onclick="location='/home/secret'"> 
+                            onclick="location='/home/secret/order'"> 
                             銷貨管理
                         </a>
                     </li>
@@ -124,4 +118,3 @@ $result = $db->query("SELECT * FROM `employees` WHERE `em_name` LIKE '王大%'")
     @yield('content') 
 
 </body>
-    

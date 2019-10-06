@@ -25,12 +25,19 @@ class HomeController extends Controller
     
         return view('home.login');
     }
+    function announcementpage(){
     
+        return view('home.secret_announcement');
+    }
+    //進銷貨頁面
     function purchasepage(){
-        return view('purchase.secret_purchase');
+        return view('home.secret_purchase');
     }
-    function bosspage(){
     
-        return view('home.secret_bosslogin');
+    function orderpage(){
+    
+        return view('home.secret_order');
     }
+
+    
 }
