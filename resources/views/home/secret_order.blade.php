@@ -26,26 +26,26 @@ $result = $db->query("SELECT * FROM `ordermater`");
 </div>
 
 {{-- purchase --}}
-<form method="post" action="/home/secret/order" class="form-horizontal">
+<form method="post" action="/home/secret/order" class="form-horizontal"  style="font-size:large; margin:10px 10px">
     @csrf
     <?php  while($row = $result->fetch()){ ?>
 
-    銷貨單號：<input value="<?php echo "{$row['ordermater_id']}";?>">
+    銷貨單號：<input value="<?php echo "{$row['ordermater_id']}";?>" style="margin:0px 10px">
 
-    建檔日期：<input value="<?php echo "{$row['ordermater_date']}";?>">
+    建檔日期：<input value="<?php echo "{$row['ordermater_date']}";?>"  style="margin:0px 10px">
 
-    到貨/需求日：<input value="<?php echo "{$row['ordermater_demand']}";?>">
+    到貨/需求日：<input value="<?php echo "{$row['ordermater_demand']}";?>" style="margin:0px 10px">
 
-    商品出貨日：<input value="<?php echo "{$row['ordermater_shipped']}";?>">
+    商品出貨日：<input value="<?php echo "{$row['ordermater_shipped']}";?>" style="margin:0px 10px">
+    
+    物流單號：<input value="<?php echo "{$row['ordermater_shipmentnumber']}";?>" style="margin:0px 10px">
     <br>
     <br>
-    物流單號：<input value="<?php echo "{$row['ordermater_shipmentnumber']}";?>">
+    客戶編號：<input value="<?php echo "{$row['cust_id']}";?>" style="margin:0px 10px">
 
-    客戶編號：<input value="<?php echo "{$row['cust_id']}";?>">
+    寄送地址：<input style="width:300px;" value="<?php echo "{$row['ordermater_address']}";?>" style="margin:0px 10px">
 
-    寄送地址：<input style="width:300px;" value="<?php echo "{$row['ordermater_address']}";?>">
-
-    建檔人員：<input value="<?php echo "{$row['em_id']}";?>">
+    建檔人員：<input value="<?php echo "{$row['em_id']}";?>" style="margin:0px 10px">
 
 </form>
 <?php }$db = null; ?>
@@ -53,7 +53,7 @@ $result = $db->query("SELECT * FROM `ordermater`");
 {{-- purchaselist --}}
 
 <form method="post" action="/home/secret/purchase" class="form-horizontal">
-  <table class="table table-bordered">
+  <table class="table table-bordered table-hover"  style="font-size:large;">
     <thead>
       <th>序號</th>
       <th>產品編號</th>
@@ -65,14 +65,14 @@ $result = $db->query("SELECT * FROM `ordermater`");
       <th>小計</th>
     </thead> 
     <tbody>
-      <td><input  style="width:50px;" value="1"></td>
-      <td><input  style="width:100px;" value="A"></td>
+      <td><input value="1"></td>
+      <td><input value="A"></td>
       <td><input value="咖啡豆"></td>
-      <td><input style="width:100px;" ></td>
-      <td><input style="width:100px;" value="300"></td>
-      <td><input style="width:100px;" value="1"></td>
-      <td><input style="width:100px;" value="1"></td>
-      <td><input style="width:100px;" value="1"></td>
+      <td><input></td>
+      <td><input value="300"></td>
+      <td><input value="1"></td>
+      <td><input value="1"></td>
+      <td><input value="1"></td>
     </tbody>
   </table>
 </form>

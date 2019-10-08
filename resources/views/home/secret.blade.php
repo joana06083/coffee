@@ -41,7 +41,7 @@ $result = $db->query("SELECT * FROM `employees` WHERE `em_name` LIKE '王大%'")
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-            <a class="navbar-brand" href="/home/secret/announcement">coffee進銷管理系統</a>
+            <a class="navbar-brand" href="/home/secret/announcement" style="font-size:200%;">coffee進銷管理系統</a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,42 +54,42 @@ $result = $db->query("SELECT * FROM `employees` WHERE `em_name` LIKE '王大%'")
 
                 <ul class="navbar-nav">
 
-                    <li class="nav-item">
+                    <li class="nav-item" style="font-size:large;">
                         <a class="nav-link" href="#"
                             onclick="location='/home/secret/purchase'"> 
                             進貨管理
                         </a>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item" style="font-size:large;">
                         <a class="nav-link" href="#"
                             onclick="location='/home/secret/order'"> 
                             銷貨管理
                         </a>
                     </li>
                     
-                  <li class="nav-item">
+                  <li class="nav-item" style="font-size:large;">
                         <a class="nav-link" href="#"
                             onclick="location='/home/secret/suppliers'"> 
                             廠商管理
                         </a>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item" style="font-size:large;">
                         <a class="nav-link" href="#"
                             onclick="location='/home/secret/customers'"> 
                             顧客管理
                         </a>
                     </li>
 
-                    <li class="nav-item">
+                    <li class="nav-item" style="font-size:large;">
                         <a class="nav-link" href="#"
                             onclick="location='/home/secret/products'"> 
                             產品管理
                         </a>
                     </li>
                         
-                    <li class="nav-item">
+                    <li class="nav-item" style="font-size:large;">
                         <a class="nav-link" href="#"
                             onclick="location='/home/secret/employees'"> 
                             人員帳號管理

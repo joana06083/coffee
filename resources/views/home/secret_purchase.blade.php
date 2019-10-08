@@ -13,7 +13,7 @@ $result = $db->query("SELECT * FROM `purchase`");
 
 {{-- 功能鍵 --}}
 
-<div style="margin:10px 5px">
+<div style="margin:10px 10px">
   <form method="post" action="/home/secret/purchase/id">   
     <a href="/home/secret/purchase/create" class="btn btn-md btn-success pull-right">
       <span class="glyphicon glyphicon-plus"></span>新增
@@ -27,26 +27,26 @@ $result = $db->query("SELECT * FROM `purchase`");
 </div>
 
 {{-- purchase --}}
-<form method="post" action="/home/secret/purchase" class="form-horizontal">
+<form method="post" action="/home/secret/purchase" class="form-horizontal-hover"  style="font-size:large; margin:10px 10px">
     @csrf
     <?php  while($row = $result->fetch()){ ?>
 
-    進貨單號：<input value="<?php echo "{$row['pur_id']}";?>">
+    進貨單號：<input value="<?php echo "{$row['pur_id']}";?>" style="margin:0px 10px">
 
-    建檔日期：<input value="<?php echo "{$row['pur_date']}";?>">
+    建檔日期：<input value="<?php echo "{$row['pur_date']}";?>" style="margin:0px 10px">
 
-    到貨/需求日：<input value="<?php echo "{$row['pur_demand']}";?>">
+    到貨/需求日：<input value="<?php echo "{$row['pur_demand']}";?>" style="margin:0px 10px">
 
-    商品出貨日：<input value="<?php echo "{$row['pur_shipped']}";?>">
+    商品出貨日：<input value="<?php echo "{$row['pur_shipped']}";?>" style="margin:0px 10px">
+
+    物流單號：<input value="<?php echo "{$row['pur_shipmentnumber']}";?>" style="margin:0px 10px">
     <br>
     <br>
-    物流單號：<input value="<?php echo "{$row['pur_shipmentnumber']}";?>">
+    廠商統編：<input value="<?php echo "{$row['sup_id']}";?>" style="margin:0px 10px">
+   
+    寄送地址：<input style="width:300px;" value="<?php echo "{$row['pur_address']}";?>" style="margin:0px 10px">
 
-    廠商統編：<input value="<?php echo "{$row['sup_id']}";?>">
-
-    寄送地址：<input style="width:300px;" value="<?php echo "{$row['pur_address']}";?>">
-
-    建檔人員：<input value="<?php echo "{$row['em_id']}";?>">
+    建檔人員：<input value="<?php echo "{$row['em_id']}";?>" style="margin:0px 10px">
 
 </form>
 <?php }$db = null; ?>
@@ -54,7 +54,7 @@ $result = $db->query("SELECT * FROM `purchase`");
 <!-- purchaselist-->
 
 <form method="post" action="/home/secret/purchase" class="form-horizontal">
-  <table class="table table-bordered">
+  <table class="table table-bordered table-hover" style="font-size:large;">
     <thead>
       <th>序號</th>
       <th>產品編號</th>
@@ -66,7 +66,7 @@ $result = $db->query("SELECT * FROM `purchase`");
       <th>小計</th>
     </thead> 
     <tbody>
-      <td><input  style="width:50px;" value="1"></td>
+      <td><input value="1"></td>
       <td>
         <select>
           <option>A</option>
@@ -75,11 +75,11 @@ $result = $db->query("SELECT * FROM `purchase`");
         </select>
       </td>
       <td><input></td>
-      <td><input style="width:100px;" value="1"></td>
-      <td><input style="width:100px;" value="1"></td>
-      <td><input style="width:100px;" value="1"></td>
-      <td><input style="width:100px;" value="1"></td>
-      <td><input style="width:100px;" value="1"></td>
+      <td><input value="1"></td>
+      <td><input value="1"></td>
+      <td><input value="1"></td>
+      <td><input value="1"></td>
+      <td><input value="1"></td>
     </tbody>
   </table>
 </form>
