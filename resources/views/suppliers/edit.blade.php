@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>coffee進銷管理系統</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-</head>
-<body>
-  <span style=" font-family:Microsoft JhengHei;">
+
+<span style=" font-family:Microsoft JhengHei;">
+    @extends('home.secret')
+    @section('head')
+      <!-- css樣式 -->
+      <link rel="stylesheet" href="../../../../css/secret.css">
+    @endsection
+    @section('content')
+    
     <div class="container">
 
     <form method="post" action="/home/secret/suppliers/{{$sup->sup_id}}" class="form-horizontal">
@@ -17,10 +14,16 @@
     @method('PUT')
     <fieldset>
 
+
     <!-- Form Name -->
-    <legend>Suppliers Data</legend>
+    <br>
+      
+    <h3 style="text-align:center;margin:20px">修改廠商資料</h3>
+
+    <hr>
 
     <!-- sup_id-->
+    <div style="width:100%;margin-left:370px">
     <div class="form-group">
       <label class="col-md-4 control-label" for="sup_id">廠商統編：</label>  
       <div class="col-md-4">
@@ -76,7 +79,10 @@
     </form>
 
 
-    </div>
-  </span>
-</body>
-</html>
+  </div>
+
+</div>
+</span>
+
+
+@endsection

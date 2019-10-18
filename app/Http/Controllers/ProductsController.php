@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Products;
+use App\Http\Models\Products;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
@@ -41,14 +41,17 @@ class ProductsController extends Controller
     public function store(Request $request)
     {
         //
-        $pro = new Products();
-        $pro->pro_id = $request->pro_id;
-        $pro->pro_name = $request->pro_name;
-        $pro->pro_unit = $request->pro_unit;
-        $pro->pro_price = $request->pro_price;
-        $pro->pro_photo = $request->pro_photo;
-        $pro->save();
-        return redirect("/home/secret/products");
+        
+        
+            $pro = new Products();
+            $pro->pro_id = $request->pro_id;
+            $pro->pro_name = $request->pro_name;
+            $pro->pro_unit = $request->pro_unit;
+            $pro->pro_price = $request->pro_price;
+            $pro->pro_photo = $request->pro_photo;
+            $pro->save();
+
+            return redirect("/home/secret/products/show");
         
 
     }
@@ -62,6 +65,8 @@ class ProductsController extends Controller
     public function show($id)
     {
         //
+        $productsList = Products::all();
+        return view('products.show', compact('productsList'));
     }
 
     /**
@@ -86,14 +91,16 @@ class ProductsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $pro = Products::find($id);
-        $pro->pro_id = $request->pro_id;
-        $pro->pro_name = $request->pro_name;
-        $pro->pro_unit = $request->pro_unit;
-        $pro->pro_price = $request->pro_price;
-        $pro->pro_photo = $request->pro_photo;
-        $pro->save();
-        return redirect("/home/secret/products");
+      
+            $pro = Products::find($id);
+            $pro->pro_id = $request->pro_id;
+            $pro->pro_name = $request->pro_name;
+            $pro->pro_unit = $request->pro_unit;
+            $pro->pro_price = $request->pro_price;
+            $pro->pro_photo = $request->pro_photo;
+            $pro->save();
+            return redirect("/home/secret/products/show");
+ 
     }
 
     /**
@@ -106,7 +113,8 @@ class ProductsController extends Controller
     {
         //
         $pro = Products::find($id);
+        
         $pro->delete();
-        return redirect("/home/secret/products");
+        return redirect("/home/secret/products/show");
     }
 }

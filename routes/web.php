@@ -14,8 +14,10 @@
 Route::get('/home/index',"HomeController@index");
 
 // login
-Route::get('/home/login',"HomeController@loginpage");
-Route::POST('/home/login',"HomeController@loginpage");
+
+Route::get('/home/login', 'HomeController@login');
+Route::post('/home/login', 'HomeController@login');
+
 
 //secret page
 Route::get('/home/secret',"HomeController@secretpage");
@@ -42,12 +44,14 @@ Route::resource('/home/secret/customers', 'CustomersController');
 Route::get('/home/secret/suppliers',"SuppliersController@index");
 Route::resource('/home/secret/suppliers', 'SuppliersController');
 
-//purchase  (Boss、採購)
-Route::get('/home/secret/purchase',"HomeController@purchasepage");
+//purchases  (Boss、採購)
+Route::get('/home/secret/purchase',"PurchaseController@index");
+Route::resource('/home/secret/purchase', 'PurchaseController');
 
-//order (Boss、行銷)
-Route::get('/home/secret/order',"HomeController@orderpage");
 
+//orders (Boss、行銷)
+Route::get('/home/secret/orders',"OrdersController@index");
+Route::resource('/home/secret/orders', 'OrdersController');
 
 
 

@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Suppliers;
+use App\Http\Models\Suppliers;
+
 use Illuminate\Http\Request;
 
 class SuppliersController extends Controller
@@ -17,6 +18,7 @@ class SuppliersController extends Controller
     {
     //
         $suppliersList = Suppliers::all();
+
         return view('suppliers.secret_suppliers', compact('suppliersList'));
     }   
 
@@ -47,7 +49,7 @@ class SuppliersController extends Controller
             $sup->sup_tel = $request->sup_tel;
             $sup->sup_address = $request->sup_address;
             $sup->save();
-            return redirect("/home/secret/suppliers");
+            return redirect("/home/secret/suppliers/show");
 
         }
 
@@ -60,6 +62,10 @@ class SuppliersController extends Controller
         public function show($id)
         {
             //
+            $suppliersList = Suppliers::all();
+
+            return view('suppliers.show', compact('suppliersList'));
+
         }
 
         /**
@@ -91,7 +97,8 @@ class SuppliersController extends Controller
             $sup->sup_tel = $request->sup_tel;
             $sup->sup_address = $request->sup_address;
             $sup->save();  
-            return redirect("/home/secret/suppliers");
+
+            return redirect("/home/secret/suppliers/show");
         }
 
         /**
@@ -105,6 +112,6 @@ class SuppliersController extends Controller
             //
             $sup = Suppliers::find($id);
             $sup->delete();
-            return redirect("/home/secret/suppliers");
+            return redirect("/home/secret/suppliers/show");
         }
 }

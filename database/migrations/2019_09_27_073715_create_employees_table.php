@@ -17,7 +17,7 @@ class CreateEmployeesTable extends Migration
             $table->bigIncrements('em_id');
             $table->string('em_account');
             $table->string('em_password');
-            $table->int('id');
+            $table->string('d_name');
             $table->string('em_name');
             $table->string('em_email');
             $table->string('em_tel');

@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>coffee進銷管理系統</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-</head>
-<body>
-<span style=" font-family:Microsoft JhengHei;">
+
+@extends('home.secret')
+@section('head')
+  <!-- css樣式 -->
+
+  <link rel="stylesheet" href="../../../../css/secret.css">
+
+@endsection
+@section('content')
+
+
     <div class="container">
 
     <form method="post" action="/home/secret/products/{{$pro->pro_id}}" class="form-horizontal">
@@ -19,12 +18,17 @@
     <fieldset>
 
     <!-- Form Name -->
-    <legend>Products Data</legend>
+    <br>
+    
+    <h3 style="text-align:center;margin:20px">修改產品資料</h3>
 
+    <hr>
+    
     <!-- pro_id-->
+    <div style="width:100%;margin-left:370px">
     <div class="form-group">
       <label class="col-md-4 control-label" for="pro_id">序號：</label>  
-      <div class="col-md-4">
+      <div class="col-md-4" >
       <input id="pro_id" name="pro_id" value="{{$pro->pro_id}}" type="text" placeholder="" class="form-control input-md"> 
       </div>
     </div>
@@ -40,7 +44,7 @@
     <!--pro_unit-->
     <div class="form-group">
       <label class="col-md-4 control-label" for="pro_unit">單位：</label>  
-      <div class="col-md-4">
+      <div class="col-md-4" >
       <input id="pro_unit" name="pro_unit" value="{{$pro->pro_unit}}" type="text" placeholder="" class="form-control input-md">
       </div>
     </div>
@@ -77,6 +81,8 @@
 
 
     </div>
+    </div>
 </span>
-</body>
-</html>
+
+
+@endsection

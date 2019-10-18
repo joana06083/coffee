@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Employees;
+use App\Http\Models\Employees;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
@@ -41,6 +41,7 @@ class EmployeesController extends Controller
     public function store(Request $request)
     {
         //
+    
         $emp = new Employees();
         $emp->em_id = $request->em_id;
         $emp->em_account = $request->em_account;
@@ -52,7 +53,7 @@ class EmployeesController extends Controller
         $emp->em_address = $request->em_address;
 
         $emp->save();
-        return redirect("/home/secret/employees");
+        return redirect("/home/secret/employees/show");
 
     }
 
@@ -62,9 +63,12 @@ class EmployeesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
         //
+        $employeesList = Employees::all();
+        return view('employees.show', compact('employeesList'));
+
     }
 
     /**
@@ -90,7 +94,9 @@ class EmployeesController extends Controller
     public function update(Request $request, $id)
     {
         $emp = Employees::find($id);
+
         $emp->em_id = $request->em_id;
+        
         $emp->em_account = $request->em_account;
         $emp->em_password = $request->em_password;
         $emp->d_name = $request->d_name ;
@@ -99,7 +105,7 @@ class EmployeesController extends Controller
         $emp->em_tel = $request->em_tel;
         $emp->em_address = $request->em_address;
         $emp->save();
-        return redirect("/home/secret/employees");
+        return redirect("/home/secret/employees/show");
     }
 
     /**
@@ -113,6 +119,6 @@ class EmployeesController extends Controller
         //
         $emp = Employees::find($id);
         $emp->delete();
-        return redirect("/home/secret/employees");
+        return redirect("/home/secret/employees/show");
     }
 }

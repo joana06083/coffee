@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Customers;
+use App\Http\Models\Customers;
 use Illuminate\Http\Request;
 
 class CustomersController extends Controller
@@ -47,7 +47,7 @@ class CustomersController extends Controller
             $cust->cust_address = $request->cust_address;
             $cust->em_id = $request->em_id;
             $cust->save();
-            return redirect("/home/secret/customers");
+            return redirect("/home/secret/customers/show");
 
         }
 
@@ -60,6 +60,8 @@ class CustomersController extends Controller
         public function show($id)
         {
             //
+            $customersList = Customers::all();
+            return view('customers.show', compact('customersList'));
         }
 
         /**
@@ -84,6 +86,7 @@ class CustomersController extends Controller
          */
         public function update(Request $request, $id)
         {
+        
             $cust = Customers::find($id);
             $cust->cust_id = $request->cust_id;       
             $cust->cust_name = $request->cust_name;
@@ -92,7 +95,8 @@ class CustomersController extends Controller
             $cust->cust_address = $request->cust_address;
             $cust->em_id = $request->em_id;
             $cust->save();
-            return redirect("/home/secret/customers");
+          
+          return redirect("/home/secret/customers/show");
         }
 
         /**
@@ -106,6 +110,6 @@ class CustomersController extends Controller
             //
             $cust = Customers::find($id);
             $cust->delete();
-            return redirect("/home/secret/customers");
+            return redirect("/home/secret/customers/show");
         }
 }
